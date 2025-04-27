@@ -32,10 +32,7 @@ func (u *UnionFind) FindSet(i int) int {
 }
 
 func (u *UnionFind) IsSameSet(i, j int) bool {
-	if u.FindSet(i) == u.FindSet(j) {
-		return true
-	}
-	return false
+	return u.FindSet(i) == u.FindSet(j)
 }
 
 func (u *UnionFind) UnionSet(i, j int) {
